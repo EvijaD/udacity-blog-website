@@ -1,0 +1,41 @@
+.container
+{
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 120px 800px 100px;
+  grid-template-areas:
+  "hd"
+  "sd"
+  "ft";
+  border: 2px solid yellow;
+}
+
+.container > div
+{
+  border: 1px solid red;
+  background: #F8FA9D;
+}
+
+.header
+{
+  grid-area: hd;
+  font-size: 40px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content
+{
+  grid-area: sd;
+}
+
+.footer
+{
+  grid-area: ft;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
