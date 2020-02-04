@@ -8,19 +8,14 @@ img
 .container
 {
   display: grid;
-  grid-template-columns: 100%;
+  grid-template-columns: 1000px;
   grid-template-rows: 120px 800px 100px;
   grid-template-areas:
   "hd"
   "sd"
   "ft";
-  border: 2px solid white;
-}
-
-.container > div
-{
-  border: 1px solid red;
-  /*background: #ffffff;*/
+  justify-content: center;
+  align-items: center;
 }
 
 .header
@@ -40,13 +35,33 @@ img
   grid-area: sd;
 }
 
+.posts-grid
+{
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 490px 490px;
+  grid-template-rows: 220px 220px 220px;
+  grid-gap: 20px;
+}
+
+.posts-grid > div
+{
+  box-sizing: border-box;
+  width: 490px;
+  height: 220px;
+  border: 3px solid #ececec;
+  background: #ffffff;
+}
+
 .footer
 {
   grid-area: ft;
-  font-size: 20px;
+  font-size: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #f9f9f9;
-  color: black;
+  border-top: 2px solid #ececec;
+  color: gray;
+  height: 100px;
 }
