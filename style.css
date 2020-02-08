@@ -1,15 +1,27 @@
-img
+h1
 {
-  padding: 2px;
-  width: 30px;
-  margin-left: 15px;
+    font-size: 28px;
+    font-family: serif;
+}
+
+p
+{
+  font-size: 16px;
+  font-family: serif;
+}
+
+.time
+{
+  font-size: 15px;
+  font-family: serif;
+  color: gray;
 }
 
 .container
 {
   display: grid;
   grid-template-columns: 1000px;
-  grid-template-rows: 120px 800px 100px;
+  grid-template-rows: 120px 740px 100px;
   grid-template-areas:
   "hd"
   "sd"
@@ -51,6 +63,33 @@ img
   height: 220px;
   border: 3px solid #ececec;
   background: #ffffff;
+  padding: 20px;
+  position: relative;
+}
+
+.posts-grid h1
+{
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.category
+{
+
+}
+
+.continue
+{
+  font-size: 17px;
+  font-family: serif;
+  color: blue;
+  position: absolute;
+  bottom: 20px;
+}
+
+.continue:visited
+{
+  color: gray;
 }
 
 .footer
@@ -64,4 +103,15 @@ img
   border-top: 2px solid #ececec;
   color: gray;
   height: 100px;
+}
+
+.footer span
+{
+  margin-right: 15px;
+}
+
+.footer img
+{
+  padding: 2px;
+  width: 30px;
 }
