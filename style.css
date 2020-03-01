@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Merriweather|Raleway&display=swap');
 
+body
+{
+  margin: 0;
+}
+
 *
 {
   font-family: Raleway, sans-serif;
@@ -7,13 +12,50 @@
 
 h1
 {
+  font-size: 40px;
+  font-family: Merriweather, serif;
+}
+
+h2
+{
   font-size: 28px;
   font-family: Merriweather, serif;
+  margin-block-start: 0.2em;
+  margin-block-end: 0.2em;
+}
+
+h3
+{
+  font-size: 14px;
 }
 
 p
 {
   font-size: 14px;
+}
+
+quote
+{
+  display: block;
+  color: gray;
+  margin-top: 10px;
+}
+
+quote:before
+{
+    content: open-quote;
+}
+
+quote:after
+{
+    content: close-quote;
+}
+
+.figure
+{
+  text-align: center;
+  font-size: 12px;
+  font-style: italic;
 }
 
 .time
@@ -52,17 +94,20 @@ p
   align-items: center;
 }
 
-.title,
-.title > a
+a:link
 {
-  font-size: 40px;
-  font-weight: bold;
+  text-decoration: none;
+}
+
+.title,
+.title a
+{
   text-decoration: underline;
   font-family: Merriweather, serif;
   display: flex;
   justify-content: center;
   align-items: center;
-
+  color: black;
 }
 
 .search
@@ -108,6 +153,8 @@ p
   font-size: 14px;
   font-weight: bold;
   color: green;
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 
 .continue
@@ -145,4 +192,52 @@ p
 {
   padding: 2px;
   width: 30px;
+}
+
+@media screen and (max-width: 1000px)
+{
+  .container
+  {
+    display: grid;
+    grid-template-columns: 490px;
+    grid-template-rows: 150px auto 140px;
+    grid-template-areas:
+    "hd"
+    "sd"
+    "ft";
+  }
+
+  .header-grid
+  {
+    display: grid;
+    grid-template-columns: 245px 245px;
+    grid-template-rows: 50px 50px;
+    grid-template-areas:
+    "subscribe search"
+    "title title"
+  }
+
+  .subscribe
+  {
+    grid-area: subscribe;
+  }
+
+  .title
+  {
+    grid-area: title;
+  }
+
+  .search
+  {
+    grid-area: search;
+  }
+
+  .posts-grid
+  {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 490px;
+    grid-template-rows: 220px 220px 220px 220px 220px 220px;
+    grid-gap: 20px;
+  }
 }

@@ -1,0 +1,59 @@
+p
+{
+  line-height: 1.6;
+}
+
+.container
+{
+  grid-template-rows: 120px auto 100px;
+}
+
+.gallery
+{
+  display: grid;
+  grid-template-columns: 477px 477px;
+  justify-items: center;
+}
+
+.gallery > figure > img
+{
+  width: 420px;
+  height: 260px;
+}
+
+.posts-grid
+{
+  grid-template-columns: 1000px;
+  grid-template-rows: auto;
+}
+
+.posts-grid > div
+{
+  width: 1000px;
+  height: auto;
+  margin-bottom: 25px;
+}
+
+.back
+{
+    margin-top: 10px;
+    display: block;
+}
+
+@media screen and (max-width: 1000px)
+{
+  .posts-grid {
+    grid-template-columns: 490px;
+  }
+
+  .posts-grid > div {
+    width: 490px;
+    margin-bottom: 0;
+  }
+
+  .gallery
+  {
+    grid-template-columns: 444px;
+    grid-template-rows: 280px;
+  }
+}
