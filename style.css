@@ -77,7 +77,7 @@ p
   align-items: center;
 }
 
-.header
+header
 {
   grid-area: hd;
 }
@@ -207,7 +207,7 @@ a:link
   color: gray;
 }
 
-.footer
+footer
 {
   grid-area: ft;
   font-size: 14px;
@@ -220,12 +220,12 @@ a:link
   height: 100px;
 }
 
-.footer span
+footer span
 {
   margin-right: 15px;
 }
 
-.footer img
+footer img
 {
   padding: 2px;
   width: 30px;
@@ -268,8 +268,6 @@ a:link
   {
     grid-area: search;
   }
-
-
 
   .posts-grid
   {

@@ -69,15 +69,16 @@ h4
 
 @media screen and (max-width: 1000px)
 {
-  .posts-grid {
+  .posts-grid
+  {
     grid-template-columns: 490px;
   }
 
   .posts-grid > div
-{
+  {
     width: 490px;
     margin-bottom: 0;
-}
+  }
 
   .gallery
   {
