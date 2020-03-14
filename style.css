@@ -169,9 +169,28 @@ a:link
 {
   font-size: 14px;
   font-weight: bold;
-  color: green;
   margin-top: 0;
   margin-bottom: 0;
+}
+
+.world
+{
+  color: green;
+}
+
+.life
+{
+  color: gray;
+}
+
+.love
+{
+  color: red;
+}
+
+.dreams
+{
+  color: blue;
 }
 
 .continue
