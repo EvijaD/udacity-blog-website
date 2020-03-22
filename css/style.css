@@ -3,24 +3,6 @@
 @import url('header.css');
 @import url('footer.css');
 
-.quote
-{
-  display: block;
-  font-size: 16px;
-  color: gray;
-  margin-top: 10px;
-}
-
-.quote:before
-{
-    content: open-quote;
-}
-
-.quote:after
-{
-    content: close-quote;
-}
-
 .figure
 {
   text-align: center;
