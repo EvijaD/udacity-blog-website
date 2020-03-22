@@ -37,6 +37,7 @@ p
 .quote
 {
   display: block;
+  font-size: 16px;
   color: gray;
   margin-top: 10px;
 }
@@ -120,6 +121,15 @@ a:link
 .search img
 {
   width: 22px;
+}
+
+.button
+{
+  position:absolute;
+  font-size: 13px;
+  left: 430px;
+  right: -430px;
+  bottom: 18px;
 }
 
 .content
