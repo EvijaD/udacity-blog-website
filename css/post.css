@@ -3,15 +3,6 @@ p
   line-height: 1.6;
 }
 
-h4
-{
-  font-size: 18px;
-  font-weight: bold;
-  font-family: Merriweather, serif;
-  margin-top: 0.1em;
-  margin-bottom: 0.1em;
-}
-
 .container
 {
   grid-template-rows: 120px auto 100px;
@@ -19,34 +10,36 @@ h4
 
 .author
 {
-  margin-top: 20px;
   font-size: 14px;
+  margin-bottom: 20px;
 }
 
 .author img
 {
-  width: 10%;
-  float: left;
+  width: 100px;
   margin-right: 10px;
+  display: block;
 }
 
-.author div
+.author > div
 {
   margin-top: 5px;
+  float: left;
 }
 
 button
 {
   border: none;
   outline: 0;
-  display: inline-block;
+  display: block;
   padding: 4px;
   color: white;
   background-color: #000;
   text-align: center;
   cursor: pointer;
-  width: 10%;
+  width: 100px;
   font-size: 14px;
+  margin-top: 5px;
 }
 
 button:hover, a:hover
@@ -54,10 +47,15 @@ button:hover, a:hover
   opacity: 0.7;
 }
 
+button::before
+{
+  clear: both;
+}
+
 .gallery
 {
   display: grid;
-  grid-template-columns: 477px 477px;
+  grid-template-columns: 47.7% 47.7%;
   justify-items: center;
 }
 
@@ -86,7 +84,7 @@ button:hover, a:hover
     display: block;
 }
 
-@media screen and (max-width: 1000px)
+@media screen and (min-width: 500px) and (max-width: 1000px)
 {
   .posts-grid
   {
@@ -101,7 +99,43 @@ button:hover, a:hover
 
   .gallery
   {
-    grid-template-columns: 444px;
+    grid-template-columns: 100%;
     grid-template-rows: 280px;
+  }
+
+  .author .info
+  {
+    max-width: 380px;
+  }
+}
+
+@media screen and (max-width: 499px)
+{
+  .posts-grid
+  {
+    grid-template-columns: 300px;
+  }
+
+  .posts-grid > div
+  {
+    width: 300px;
+    margin-bottom: 0;
+  }
+
+  .gallery
+  {
+    grid-template-columns: 287px;
+    grid-template-rows: 160px;
+  }
+
+  .gallery > figure > img
+  {
+    width: 210px;
+    height: 130px;
+  }
+
+  .author .info
+  {
+    max-width: 190px;
   }
 }

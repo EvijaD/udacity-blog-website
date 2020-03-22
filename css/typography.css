@@ -1,0 +1,47 @@
+body
+{
+  margin: 0;
+}
+
+*
+{
+  font-family: Raleway, sans-serif;
+}
+
+h1
+{
+  font-size: 40px;
+  font-family: Merriweather, serif;
+}
+
+h2
+{
+  font-size: 28px;
+  font-family: Merriweather, serif;
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
+}
+
+h3
+{
+  font-size: 14px;
+}
+
+p
+{
+  font-size: 14px;
+}
+
+h4
+{
+  font-size: 18px;
+  font-weight: bold;
+  font-family: Merriweather, serif;
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
+}
+
+a:link
+{
+  text-decoration: none;
+}

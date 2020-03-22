@@ -1,0 +1,23 @@
+footer
+{
+  grid-area: ft;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9f9;
+  border-top: 2px solid #ececec;
+  color: gray;
+  height: 100px;
+}
+
+footer span
+{
+  margin-right: 15px;
+}
+
+footer img
+{
+  padding: 2px;
+  width: 30px;
+}

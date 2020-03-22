@@ -1,38 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Merriweather|Raleway&display=swap');
-
-body
-{
-  margin: 0;
-}
-
-*
-{
-  font-family: Raleway, sans-serif;
-}
-
-h1
-{
-  font-size: 40px;
-  font-family: Merriweather, serif;
-}
-
-h2
-{
-  font-size: 28px;
-  font-family: Merriweather, serif;
-  margin-top: 0.1em;
-  margin-bottom: 0.1em;
-}
-
-h3
-{
-  font-size: 14px;
-}
-
-p
-{
-  font-size: 14px;
-}
+@import url('typography.css');
+@import url('header.css');
+@import url('footer.css');
 
 .quote
 {
@@ -69,66 +38,21 @@ p
 {
   display: grid;
   grid-template-columns: 1000px;
-  grid-template-rows: 120px 740px 100px;
+  grid-template-rows: 120px 700px 100px;
   grid-template-areas:
   "hd"
   "sd"
   "ft";
   justify-content: center;
   align-items: center;
-}
-
-header
-{
-  grid-area: hd;
-}
-
-.header-grid
-{
-  display: grid;
-  grid-template-columns: 250px 500px 250px;
-}
-
-.subscribe
-{
-  display: flex;
-  align-items: center;
-}
-
-a:link
-{
-  text-decoration: none;
-}
-
-.title,
-.title a
-{
-  text-decoration: underline;
-  font-family: Merriweather, serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: black;
-}
-
-.search
-{
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.search img
-{
-  width: 22px;
+  grid-gap: 20px;
 }
 
 .button
 {
   position:absolute;
   font-size: 13px;
-  left: 430px;
-  right: -430px;
+  right: 20px;
   bottom: 18px;
 }
 
@@ -141,7 +65,7 @@ a:link
 {
   display: grid;
   justify-content: center;
-  grid-template-columns: 490px 490px;
+  grid-template-columns: 49% 49%;
   grid-template-rows: 220px 220px 220px;
   grid-gap: 20px;
 }
@@ -149,7 +73,7 @@ a:link
 .posts-grid > .card
 {
   box-sizing: border-box;
-  width: 490px;
+  width: 100%;
   height: 220px;
   border: 3px solid #ececec;
   background: #ffffff;
@@ -217,31 +141,7 @@ a:link
   color: gray;
 }
 
-footer
-{
-  grid-area: ft;
-  font-size: 14px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f9f9f9;
-  border-top: 2px solid #ececec;
-  color: gray;
-  height: 100px;
-}
-
-footer span
-{
-  margin-right: 15px;
-}
-
-footer img
-{
-  padding: 2px;
-  width: 30px;
-}
-
-@media screen and (max-width: 1000px)
+@media screen and (min-width: 500px) and (max-width: 1000px)
 {
   .container
   {
@@ -257,7 +157,7 @@ footer img
   .header-grid
   {
     display: grid;
-    grid-template-columns: 245px 245px;
+    grid-template-columns: 50% 50%;
     grid-template-rows: 50px 50px;
     grid-template-areas:
     "subscribe search"
@@ -286,5 +186,69 @@ footer img
     grid-template-columns: 490px;
     grid-template-rows: 220px 220px 220px 220px 220px 220px;
     grid-gap: 20px;
+  }
+
+  .button
+  {
+    border: 1px solid gray;
+  }
+}
+
+@media screen and (max-width: 499px)
+{
+  .container
+  {
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 120px auto 100px;
+    grid-template-areas:
+    "hd"
+    "sd"
+    "ft";
+  }
+
+  .header-grid
+  {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50px 50px;
+    grid-template-areas:
+    "subscribe search"
+    "title title"
+  }
+
+  .subscribe
+  {
+    grid-area: subscribe;
+  }
+
+  .title
+  {
+    grid-area: title;
+  }
+
+  .search
+  {
+    grid-area: search;
+  }
+
+  .posts-grid
+  {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 300px;
+    grid-template-rows: 240px 240px 240px 240px 240px 240px;
+    grid-gap: 20px;
+  }
+
+  .posts-grid > .card
+  {
+    width: 300px;
+    height: 240px;
+  }
+
+  .button
+  {
+    border: 1px solid gray;
   }
 }

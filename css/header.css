@@ -1,0 +1,39 @@
+header
+{
+  grid-area: hd;
+}
+
+.header-grid
+{
+  display: grid;
+  grid-template-columns: 250px 500px 250px;
+}
+
+.subscribe
+{
+  display: flex;
+  align-items: center;
+}
+
+.title,
+.title a
+{
+  text-decoration: underline;
+  font-family: Merriweather, serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+
+.search
+{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.search img
+{
+  width: 22px;
+}
